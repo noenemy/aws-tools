@@ -12,11 +12,6 @@ print('Loading function')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-NOW = time.time()
-ISONOW = datetime.datetime.utcfromtimestamp(NOW).isoformat()
-THEN = NOW - 300
-ISOTHEN = datetime.datetime.utcfromtimestamp(THEN).isoformat()
-
 def lambda_handler(event, context):
 
     print("Received event: " + json.dumps(event, indent=2))
